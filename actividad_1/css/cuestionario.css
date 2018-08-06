@@ -1,0 +1,507 @@
+@font-face {
+  font-family: gill-sans-mt;
+  src: url("fonts/gill-sans-mt.TTF") format("opentype"); 
+}
+
+
+* {
+  box-sizing: border-box;
+}
+html {
+background: #eee;
+height: 100%;
+}
+
+body {
+  /*background: #04AD36;*/
+  font-family: 'helvetica', sans-serif;
+}
+
+/**********************************************************/
+.box_round {
+  -webkit-border-radius: 12px; /* Safari 3-4, iOS 1-3.2, Android ≤1.6 */
+          border-radius: 12px; /* Opera 10.5, IE9+, Safari 5, Chrome, Firefox 4+, iOS 4, Android 2.1+ */
+
+  /* useful if you don't want a bg color from leaking outside the border: */
+  -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+}
+/**********************************************************/
+.clear { clear: both;}
+
+.container {
+  width: 1105px;
+  margin: 0 auto; }
+
+.encabezado {
+    position: absolute;
+    top: 1px;
+    right: 223px;
+    height: 60px;
+ }
+
+.encabezado__titulo {
+   }
+  .encabezado__titulo h1 {
+    font: 700 22px/1.4em "Lato", Helvetica, sans-serif;
+    letter-spacing: 3px;
+    margin-top: 20px;
+    color: #333; }
+
+.encabezado__audio {
+    }
+  .encabezado__audio span {
+    font-size: 14px;
+    color: #000;
+    font-weight: 300;
+    letter-spacing: 0px; }
+
+.toogle-container {
+  display: inline-block;
+  height: 70px;
+  width: 105px;
+  position: relative;
+  top: 12px;
+}
+
+  .right span {
+      font-size: 14px;
+      color:#fff;
+  }
+
+.toggle {
+  height: 30px;
+  margin: 5px auto;
+  width: 70px;
+}
+.toggle-on.active {
+  text-indent: 16px !important;
+}
+.toggle-off.active {
+  text-indent: 27px !important;
+}
+
+
+h1 {
+font: 900 24px/1.4em 'helvetica', sans-serif;
+margin:0px;
+color:#BA1A1A;
+}
+
+#instrucciones {
+    position: absolute;
+    left:308px;
+    top:163px;
+    width: 288px;
+    height: 42px;
+    line-height: 42px;
+    background-color: white;
+    text-align: center;
+
+    font-size:14px;
+    font-weight: lighter;
+}
+
+#bt_inicio {
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    right: 7px;
+    top: 11px;
+    background: url(../images/btn_home.png) no-repeat top left transparent;
+    z-index: 9999;}
+  #bt_inicio:hover {
+    opacity: 0.7;
+    cursor: pointer; }
+
+#contenedor { width: 1102px; height: 625px; border:0px solid #eee; margin: 20px auto; background: url('../images/bg-actividad.png') no-repeat top left scroll #fff; overflow:hidden; position:relative; }
+#contenedor.contenedor--resultados {background: url('../images/bg-resultados.png') no-repeat top left scroll #fff; }
+
+#preguntas {position: relative;width:1102px; height:625px;}
+
+  /*****************************/
+  .question {
+    width: 350px;
+    height: 135px;
+
+    position: absolute;
+    left: 276px;
+    top: 205px;
+
+    z-index: 50;
+
+    margin: 0px;
+
+    background-color: #fff;
+    border:2px solid #593F21;
+    border-top-width: 4px;
+    border-bottom-width: 4px;
+  }
+
+    .question p { color:#000; padding: 0px 20px 0px; font:400 16px/1.3em 'helvetica', sans-serif; text-align: justify; margin:0; }
+    .question p span { display: none; }
+
+.respuesta {
+    position: absolute;
+    width: 330px;
+    height: 52px;
+    background: #fff;
+    box-shadow: 0px 3px #6C4C2C;
+    border:1px solid #ccc;
+    border-radius: 8px;
+  }
+  .respuesta:hover{
+    cursor: pointer;
+    background-color: yellow;
+ }
+     .respuesta:hover p {
+         color: #000;
+     }
+  .respuesta p {
+    font: 400 14px/1.2em 'Helvetica',Arial,sans-serif;
+    text-align: justify;
+    color: #000;
+    margin: 0px;
+  }
+
+  .respuesta__enunciado {
+    height: 52px;
+  }
+      .respuesta__enunciado p {
+          padding-left: 12px;
+          padding-right: 12px;
+          line-height: 1.2em;
+          padding-top:16px;
+          color: black;
+      }
+
+      .respuesta__enunciado:hover p {
+        font-weight: 400;
+      }
+
+      .respuesta__enunciado p span {
+        color:#593F21;
+        font-size: 16px;
+        font-weight: bold;
+        margin-right: 7px;
+      }
+
+.respuesta.buena {
+  background: #8BC932;
+  border-color:#8BC932;
+}
+  .respuesta.buena  .respuesta__enunciado p,
+  .respuesta.buena .respuesta__enunciado p span {
+      color: #fff !important;
+  }
+
+.respuesta.mala {
+  background: #CE1205;
+  border-color: #CE1205;
+}
+  .respuesta.mala .respuesta__enunciado p,
+  .respuesta.mala .respuesta__enunciado p span
+  {
+      color: #fff !important;
+  }
+.respuesta.uno {
+  top: 132px;
+  left: 677px;
+  
+  }
+.respuesta.dos {
+  top: 198px;
+  left: 677px;
+  
+  }
+.respuesta.tres {
+  top: 260px;
+  left: 677px;
+}
+.respuesta.cuatro {
+  top: 326px;
+  left: 677px;
+ }
+
+
+/****************************/
+
+#cinta { }
+
+/****************************/
+
+#personaje {
+  position:absolute; left: 8px; top: 123px;
+  height: 501px;
+  background-image: url("../images/sprite-personaje.png");
+  background-repeat: no-repeat;
+  width: 219px;
+  z-index: 90;
+}
+#personaje.normal {
+    width: 219px;
+    background-position: 0 0;
+}
+#personaje.feliz {
+  width: 303px;
+  background-position: -219px 0;
+}
+#personaje.triste {
+  width: 205px;
+  background-position: -522px 0;
+}
+
+/*=================  Posicionar Cinta de Números ===================*/
+
+/* Cinta de plantas */
+.planta {
+  position: absolute;
+}
+  .planta.gano {
+    width: 135px;
+    height: 150px;
+    top: 382px;
+    background: url('../images/resp-buena.png') center center no-repeat;
+  }
+
+  .pl0.gano {
+    left: 214px;
+  }
+  .pl1.gano {
+    left: 302px;
+  }
+  .pl2.gano {
+    left: 386px;
+  }
+  .pl3.gano {
+    left: 474px;
+  }
+  .pl4.gano {
+    left: 558px;
+  }
+  .pl5.gano {
+    left: 639px;
+  }
+  .pl6.gano {
+    left: 727px;
+  }
+  .pl7.gano {
+    left: 811px;
+  }
+  .pl8.gano {
+    left: 895px;
+  }
+  .pl9.gano {
+    left: 975px;
+  }
+
+  .planta.perdio {
+    width: 58px;
+    height: 102px;
+    top: 431px;
+    background: url('../images/resp-mala.png') center center no-repeat;
+  }
+
+    .pl0.perdio {
+      left: 253px;
+    }
+
+    .pl1.perdio {
+      left: 339px;
+    }
+
+    .pl2.perdio {
+      left: 424px;
+    }
+
+    .pl3.perdio {
+      left: 509px;
+    }
+
+    .pl4.perdio {
+      left: 595px;
+    }
+
+    .pl5.perdio {
+      left: 679px;
+    }
+
+    .pl6.perdio {
+      left: 765px;
+    }
+
+    .pl7.perdio {
+      left: 848px;
+    }
+
+    .pl8.perdio {
+      left: 931px;
+    }
+
+    .pl9.perdio {
+      left: 1021px;
+    }
+  
+
+/* Cinta de numeros */
+.circulo {
+  position: absolute;
+  width: 50px;
+  height: 48px;
+  top: 560px;
+  line-height: 48px;
+  font-size: 32px;
+  background-color: #F6E700;
+  color:#593F21;
+  border-radius: 30%;
+  text-align: center;
+}
+
+  .circulo.gano {
+    background: #6EB11E;
+    color: #fff;
+  }
+  .circulo.perdio {
+    background: #F50C00;
+    color: #fff;
+  }
+
+
+.c0 {
+  left: 344px;
+}
+
+.c1 {
+  left: 402px;
+}
+
+.c2 {
+  left: 460px;
+}
+
+.c3 {
+  left: 518px;
+}
+
+.c4 {
+  left: 576px;
+}
+
+.c5 {
+  left: 634px;
+}
+
+.c6 {
+  left: 692px;
+}
+
+.c7 {
+  left: 751px;
+}
+
+.c8 {
+  left: 808px;
+}
+
+.c9 {
+  left: 866px;
+}
+
+
+/************************** Resultados   ********************************/
+
+.circle {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    left: 561px;
+    top: 175px;
+    color: #50554F;
+}
+
+.circle strong {
+  font-size: 30px;
+  font-weight: 900;
+  left: 0px;
+  line-height: 150px;
+  position: absolute;
+  text-align: center;
+  top: 0px;
+  width: 100%;
+}
+
+#resultados {
+  position: relative;
+  width: 1102px;
+  height: 625px;
+  z-index: 100;
+  /*background: rgba(0, 0, 0, 0.6);*/
+}
+
+.estadistica__titulo {
+    position: absolute;
+    width: 163px;
+    height: 22px;
+    left: 490px;
+    top:290px;
+}
+
+.estadistica__numero {
+  width: 109px;
+  height: 37px;
+
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0px;
+  color: #51564d;
+}
+
+.estadistica__mensaje {
+
+    width: 780px;
+    height: 60px;
+    position: absolute;
+    left: 248px;
+    top: 352px;
+    text-align: center;
+
+
+}
+.estadistica__mensaje h3 {
+  color: #000;
+  font-family: "helvetica";
+  font-size: 35px;
+  margin:0px;
+}
+.estadistica__mensaje p {
+  color: #1C1D21;
+  font-family: "helvetica";
+  font-size: 30px;
+  margin-top:0px;
+}
+
+  p.nopadding {
+    padding-top: 0px;
+  }
+
+
+.bt__jugar-de-nuevo {
+  position: absolute;
+  width: 314px;
+  height: 55px;
+  background: url(../images/btn_intentar.png) no-repeat left top;
+  left: 377px;
+  top: 478px; 
+}
+  .bt__jugar-de-nuevo:hover {opacity: .7; cursor: pointer;}
+
+
+.bt__siguiente-actividad {
+  position: absolute;
+  width: 314px;
+  height: 55px;
+  background: url(../images/btn_siguiente.png) no-repeat left top;
+  left: 731px;
+  top: 478px; 
+}
+  .bt__siguiente-actividad:hover {opacity: .7; cursor: pointer;}

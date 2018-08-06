@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+	  	<!-- Use the .htaccess and remove these lines to avoid edge case issues.
+	       More info: h5bp.com/i/378 -->
+	  	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+		<title>Siembra en sitio definitivo</title>
+	  	<meta name="description" content="Actividad de afianzamiento SENA">
+
+	  	<!-- Mobile viewport optimized: h5bp.com/viewport -->
+	  	<meta name="viewport" content="width=device-width">
+
+			<script src="js/jquery-1.9.1.js"></script>
+			<script src="js/jquery-ui.js"></script>
+
+			<script src="js/plugins.js"></script>
+			<link rel="stylesheet" href="js/toogle/css/toggles.css">
+			<link rel="stylesheet" href="js/toogle/css/themes/toggles-light.css">
+			<script src="js/toogle/toggles.min.js" type="text/javascript"></script>
+
+			<link rel="stylesheet" href="css/cuestionario.css">
+
+			<script src="js/cuestionario.js" charset="utf-8"></script>
+			<link rel="shortcut icon" type="image/png" href="../portada/images/favico.png">
+			<link rel="apple-touch-icon" type="image/png" href="../portada/images/favico_2x.png">
+	</head>
+  	<body>
+
+
+
+  		<div id='contenedor' class='box_round'>
+
+
+			<div class="encabezado ">
+
+	        <div class="encabezado__audio">
+	            <span>¿Audio?</span>
+	           <div class="toogle-container">
+	              <div class="toggle toggle-light"></div>
+	            </div>
+	        </div>
+	      </div>
+
+			<div id='personaje' class='normal'></div>
+
+			<div id="instrucciones">Seleccione la respuesta correcta</div>
+
+			<div id="resultados">
+				<div class="estadistica">
+			
+					<div class="resultados circle">
+						<strong>90
+							<i>%</i>
+						</strong>
+					</div>
+			
+					<div class="estadistica__mensaje mensaje_gano" style='display: none;'>
+						<h3>¡Felicidades!</h3>
+						<p>ha logrado el mejor puntaje.</p>
+					</div>
+			
+					<div class="estadistica__mensaje mensaje_perdio" style='display: none;'>
+						<h3>Ha tenido pocos aciertos.</h3>
+						<p>Debe estudiar más.</p>
+					</div>
+			
+					<div class="bt__jugar-de-nuevo"></div>
+					<div class="bt__siguiente-actividad"></div>
+			
+				</div>
+			
+			</div>
+
+
+  			<div id='preguntas'><!-- div preguntas -->
+
+						<!--  cuestionario -->
+						<div id='p1' class="opcion"><!-- p1 -->
+							<div class='wrap'>
+
+								<div class='question'>
+									<p><span></span> Las plantas de coberturas más utilizadas en el cultivo de palma de aceite son:</p>
+								</div>
+
+								<div class='opciones norandom'>
+									<div data-preg='p1' data-valor='false' class='respuesta uno'>
+										<div class="respuesta__letra"><span></span></div>
+										<div class="respuesta__enunciado">
+											<p> <span>A</span> Arbóreas.</p>
+										</div>
+									</div>
+									<div data-preg='p1' data-valor='true' class='respuesta dos'>
+										<div class="respuesta__letra"><span></span></div>
+										<div class="respuesta__enunciado">
+											<p> <span>B</span> Rastreras.</p>
+										</div>
+									</div>
+									<div data-preg='p1' data-valor='false' class='respuesta tres'>
+										<div class="respuesta__letra"><span></span></div>
+										<div class="respuesta__enunciado">
+											<p>  <span>C</span> Arbustivas.</p>
+										</div>
+									</div>
+									<div data-preg='p1' data-valor='false' class='respuesta cuatro'>
+										<div class="respuesta__letra"><span></span></div>
+										<div class="respuesta__enunciado">
+											<p> <span>D</span> Ninguna de las anteriores.</p>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div><!-- /p1 -->
+
+						<div id='p2' class="opcion"><!-- p2 -->
+							<div class='wrap'>
+								<div class='question'><p><span></span> Las guardarrayas son:</p></div>
+								<div class='opciones norandom'>
+									<div data-preg='p2' data-valor='false' class='respuesta uno'>
+										<div class="respuesta__letra"><span></span></div>
+										<div class="respuesta__enunciado">
+											<p> <span>A</span> Los canales de drenaje.</p>
+										</div>
+									</div>
+									<div data-preg='p2' data-valor='false' class='respuesta dos'>
+										<div class="respuesta__letra"><span></span></div>
+										<div class="respuesta__enunciado">
+											<p> <span>B</span> Líneas sembradas en arboles forestales.</p>
+										</div>
+									</div>
+									<div data-preg='p2' data-valor='true' class='respuesta tres'>
+										<div class="respuesta__letra"><span></span></div>
+										<div class="respuesta__enunciado">
+											<p> <span>C</span> Una vía de acceso.</p>
+										</div>
+									</div>
+									<div data-preg='p2' data-valor='false' class='respuesta cuatro'>
+										<div class="respuesta__letra"><span></span></div>
+										<div class="respuesta__enunciado">
+											<p> <span>D</span> Las plantas de cobertura.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div><!-- /p2 -->
+
+						<div id='p3' class="opcion"><!-- p3 -->
+							<div class='wrap'>
+								<div class='question'><p><span></span> La densidad de siembra de un cultivo de palma comúnmente es de 180 plantas por hectárea:</p></div>
+								<div class='opciones norandom'>
+									<div data-preg='p3' data-valor='true' class='respuesta uno'>
+										<div class="respuesta__letra"><span></span></div>
+										<div class="respuesta__enunciado">
+											<p> <span>A</span> Falso.</p>
+										</div>
+									</div>
+									<div data-preg='p3' data-valor='false' class='respuesta dos'>
+										<div class="respuesta__letra"><span></span></div>
+										<div class="respuesta__enunciado">
+											<p> <span>B</span> Verdadero.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div><!-- /p3 -->
+
+						<div id='p4' class="opcion"><!-- p4 -->
+							<div class='wrap'>
+								<div class='question'><p><span></span> Socolar es un término que corresponde a:</p></div>
+								<div class='opciones norandom'>
+									<div data-preg='p4' data-valor='false' class='respuesta uno'>
+										<div class="respuesta__letra"><span></span></div>
+										<div class="respuesta__enunciado">
+											<p> <span>A</span> Un proceso de roturación profunda del suelo.</p>
+										</div>
+									</div>
+									<div data-preg='p4' data-valor='false' class='respuesta dos'>
+										<div class="respuesta__letra"><span></span></div>
+										<div class="respuesta__enunciado">
+											<p> <span>B</span> Pulir el suelo previo a la siembra.</p>
+										</div>
+									</div>
+									<div data-preg='p4' data-valor='true' class='respuesta tres'>
+										<div class="respuesta__letra"><span></span></div>
+										<div class="respuesta__enunciado">
+											<p style="padding-top: 10px;"> <span>C</span> Limpieza del terreno con el corte de plantas herbáceas.</p>
+										</div>
+									</div>
+									<div data-preg='p4' data-valor='false' class='respuesta cuatro'>
+										<div class="respuesta__letra"><span></span></div>
+										<div class="respuesta__enunciado">
+											<p> <span>D</span> Arrumar troncos trozados.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div><!-- /p4 -->
+
+						<div id='p5' class="opcion"><!-- p5 -->
+							<div class='wrap'>
+								<div class='question'><p><span></span> Equipo de labranza utilizado para romper las capas endurecidas superficiales del suelo:</p></div>
+								<div class='opciones norandom'>
+									<div data-preg='p5' data-valor='false' class='respuesta uno'>
+										<div class="respuesta__letra"><span></span></div>
+										<div class="respuesta__enunciado">
+											<p> <span>A</span> Rastrillo.</p>
+										</div>
+									</div>
+									<div data-preg='p5' data-valor='false' class='respuesta dos'>
+										<div class="respuesta__letra"><span></span></div>
+										<div class="respuesta__enunciado">
+											<p> <span>B</span> Subsolador.</p>
+										</div>
+									</div>
+									<div data-preg='p5' data-valor='false' class='respuesta tres'>
+										<div class="respuesta__letra"><span></span></div>
+										<div class="respuesta__enunciado">
+											<p> <span>C</span> Rastra.</p>
+										</div>
+									</div>
+									<div data-preg='p5' data-valor='true' class='respuesta cuatro'>
+										<div class="respuesta__letra"><span></span></div>
+										<div class="respuesta__enunciado">
+											<p> <span>D</span> Cincel.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div><!-- /p5 -->
+
+						<div id='p6' class="opcion"><!-- p6 -->
+							<div class='wrap'>
+								<div class='question'><p><span></span> Las distancias de siembra en un cultivo de palma son:
+								</p></div>
+								<div class='opciones norandom'>
+									<div data-preg='p6' data-valor='false' class='respuesta uno'>
+										<div class="respuesta__letra"><span></span></div>
+										<div class="respuesta__enunciado">
+											<p> <span>A</span> 7.8 m entre plantas y 9 m entre hileras.</p>
+										</div>
+									</div>
+									<div data-preg='p6' data-valor='false' class='respuesta dos'>
+										<div class="respuesta__letra"><span></span></div>
+										<div class="respuesta__enunciado">
+											<p> <span>B</span> 8.7 m entre hileras y 9 m entre plantas.</p>
+										</div>
+									</div>
+									<div data-preg='p6' data-valor='false' class='respuesta tres'>
+										<div class="respuesta__letra">
+											<span></span>
+										</div>
+										<div class="respuesta__enunciado">
+											<p> <span>C</span> 9 m entre plantas  y 9 m entre hileras.</p>
+										</div>
+									</div>
+									<div data-preg='p6' data-valor='true' class='respuesta cuatro'>
+										<div class="respuesta__letra">
+											<span></span>
+										</div>
+										<div class="respuesta__enunciado">
+											<p> <span>D</span> 9 m entre plantas y 7.8 m entre hileras.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div><!-- /p6 -->
+
+						<div id='p7' class="opcion"><!-- p7 -->
+						<div class='wrap'>
+							<div class='question'><p><span></span> Los suelos de textura pesada requieren mayor labranza que un suelo liviano.</p></div>
+							<div class='opciones norandom'>
+								<div data-preg='p7' data-valor='false' class='respuesta uno'>
+									<div class="respuesta__letra"><span></span></div>
+									<div class="respuesta__enunciado">
+										<p class=""> <span>A</span> Falso.</p>
+									</div>
+								</div>
+								<div data-preg='p7' data-valor='true' class='respuesta dos'>
+									<div class="respuesta__letra"><span></span></div>
+									<div class="respuesta__enunciado">
+										<p class=""> <span>B</span> Verdadero.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						</div><!-- /p7 -->
+
+						<div id='p8' class="opcion"><!-- p8 -->
+						<div class='wrap'>
+						<div class='question'><p><span></span> La preparación de las plantas en vivero debe realizarse con una antelación entre: </p></div>
+						<div class='opciones norandom'>
+							<div data-preg='p8' data-valor='false' class='respuesta uno'>
+								<div class="respuesta__letra"><span></span></div>
+								<div class="respuesta__enunciado">
+									<p class=""> <span>A</span> 3 y 4 meses.</p>
+								</div>
+							</div>
+							<div data-preg='p8' data-valor='true' class='respuesta dos'>
+								<div class="respuesta__letra"><span></span></div>
+								<div class="respuesta__enunciado">
+									<p class=""> <span>B</span> 3 y 4 semanas.</p>
+								</div>
+							</div>
+							<div data-preg='p8' data-valor='false' class='respuesta tres'>
+								<div class="respuesta__letra">
+									<span></span>
+								</div>
+								<div class="respuesta__enunciado">
+									<p class=""> <span>C</span> 1 y 2 semanas.</p>
+								</div>
+							</div>
+							<div data-preg='p8' data-valor='false' class='respuesta cuatro'>
+								<div class="respuesta__letra">
+									<span></span>
+								</div>
+								<div class="respuesta__enunciado">
+									<p class=""> <span>D</span> 1 y 2 meses</p>
+								</div>
+							</div>
+						</div>
+						</div>
+						</div><!-- /p8 -->
+
+						<div id='p9' class="opcion">
+							<!-- p9 -->
+							<div class='wrap'>
+								<div class='question'>
+									<p>
+										<span></span>
+										Para facilitar las labores de manejo el área de un lote debe ser máximo:
+									</p>
+								</div>
+								<div class='opciones norandom'>
+									<div data-preg='p9' data-valor='false' class='respuesta uno'>
+										<div class="respuesta__letra">
+											<span></span>
+										</div>
+										<div class="respuesta__enunciado">
+											<p class=""> <span>A</span> 5 has.</p>
+										</div>
+									</div>
+									<div data-preg='p9' data-valor='false' class='respuesta dos'>
+										<div class="respuesta__letra">
+											<span></span>
+										</div>
+										<div class="respuesta__enunciado">
+											<p class=""> <span>B</span> 35 has.</p>
+										</div>
+									</div>
+									<div data-preg='p9' data-valor='false' class='respuesta tres'>
+										<div class="respuesta__letra">
+											<span></span>
+										</div>
+										<div class="respuesta__enunciado">
+											<p class=""> <span>C</span> 15 has.</p>
+										</div>
+									</div>
+									<div data-preg='p9' data-valor='true' class='respuesta cuatro'>
+										<div class="respuesta__letra">
+											<span></span>
+										</div>
+										<div class="respuesta__enunciado">
+											<p class=""> <span>D</span> 25 has.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- /p9 -->
+
+						<div id='p10' class="opcion">
+							<!-- p10 -->
+							<div class='wrap'>
+								<div class='question'>
+									<p>
+										<span></span>
+										La función del subsolador es:
+									</p>
+								</div>
+								<div class='opciones norandom'>
+									<div data-preg='p10' data-valor='false' class='respuesta uno'>
+										<div class="respuesta__letra">
+											<span></span>
+										</div>
+										<div class="respuesta__enunciado">
+											<p class=""> <span>A</span> Romper capas endurecidas superficiales.</p>
+										</div>
+									</div>
+									<div data-preg='p10' data-valor='false' class='respuesta dos'>
+										<div class="respuesta__letra">
+											<span></span>
+										</div>
+										<div class="respuesta__enunciado">
+											<p class=""> <span>B</span> Pulir el suelo previo a la siembra.</p>
+										</div>
+									</div>
+									<div data-preg='p10' data-valor='true' class='respuesta tres'>
+										<div class="respuesta__letra">
+											<span></span>
+										</div>
+										<div class="respuesta__enunciado">
+											<p class=""> <span>C</span> Roturación profunda.</p>
+										</div>
+									</div>
+									<div data-preg='p10' data-valor='false' class='respuesta cuatro'>
+										<div class="respuesta__letra">
+											<span></span>
+										</div>
+										<div class="respuesta__enunciado">
+											<p class=""> <span>D</span> Recolectar restos de materia orgánica.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- /p10 -->
+						<!--  fin de cuestionario -->
+
+
+  			</div><!-- fin preguntas -->
+
+			<div id='cinta'>
+					<div class='c0 circulo normal'>1</div>
+					<div class='c1 circulo normal'>2</div>
+					<div class='c2 circulo normal'>3</div>
+					<div class='c3 circulo normal'>4</div>
+					<div class='c4 circulo normal'>5</div>
+					<div class='c5 circulo normal'>6</div>
+					<div class='c6 circulo normal'>7</div>
+					<div class='c7 circulo normal'>8</div>
+					<div class='c8 circulo normal'>9</div>
+					<div class='c9 circulo normal'>10</div>
+			</div>
+
+			<div id='plantas'>
+				<div class='pl0 planta normal'></div>
+				<div class='pl1 planta normal'></div>
+				<div class='pl2 planta normal'></div>
+				<div class='pl3 planta normal'></div>
+				<div class='pl4 planta normal'></div>
+				<div class='pl5 planta normal'></div>
+				<div class='pl6 planta normal'></div>
+				<div class='pl7 planta normal'></div>
+				<div class='pl8 planta normal'></div>
+				<div class='pl9 planta normal'></div>
+			</div>
+
+			<div class='sonidos'>
+				<audio preload>
+				  <source src='audios/screen-change.mp3' type='audio/mp3'>
+				  <source src='audios/screen-change.ogg' type='audio/ogg'>
+				</audio>
+				<audio preload>
+				  <source src='audios/success.mp3' type='audio/mp3'>
+				  <source src='audios/success.ogg' type='audio/ogg'>
+				</audio>
+				<audio preload>
+				  <source src='audios/fail.mp3' type='audio/mp3'>
+				  <source src='audios/fail.ogg' type='audio/ogg'>
+				</audio>
+				<audio preload>
+				  <source src='audios/end-game-success.mp3' type='audio/mp3'>
+				  <source src='audios/end-game-success.ogg' type='audio/ogg'>
+				</audio>
+				<audio preload>
+				  <source src='audios/end-game-fail.mp3' type='audio/mp3'>
+				  <source src='audios/end-game-fail.ogg' type='audio/ogg'>
+				</audio>
+			</div>
+
+  		</div>
+
+
+		<form name='test' id='test'></form>
+  	</body>
+
+</html>

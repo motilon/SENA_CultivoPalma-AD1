@@ -1,0 +1,86 @@
+@font-face {
+  font-family: ubuntu;
+  src: url("../../fonts/Ubuntu.ttf") format("opentype"); 
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: #ccc;
+}
+
+body {
+  font-family: 'arial', sans-serif;
+  font-size: 100%;
+}
+
+.portada {
+  position: relative;
+  width: 1101px;
+  height: 624px;
+  margin: 50px auto;
+  background: url('../images/bg-portada-personaje.png') top left no-repeat;
+}
+
+.portada h1.titulo {
+  position: absolute;
+  width: 585px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  left:482px;
+  top:184px;
+  margin:0px;
+  padding: 0px;
+  font-size: 44px;
+  color: #fff;
+  font-weight: normal;
+  font-family: 'ubuntu', sans-serif;
+}
+
+.portada .instrucciones {
+  position: absolute;
+  width: 450px;
+  height: 284px;
+  left: 458px;
+  top: 224px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 4px 12px;
+}
+.portada .instrucciones h3 {
+  font-family: 'ubuntu', sans-serif;
+  font-size: 32px;
+  color: #fff;
+  margin: 0px 0px 12px;
+  text-align: center;
+  width: 100%;
+}
+
+.portada .instrucciones p {
+  font-weight: normal;
+  color:#000;
+  margin: 6px 0px;
+  text-align: justify;
+}
+
+.portada .boton_iniciar {
+  position: absolute;
+  width: 123px;
+  height: 99px;
+  background: url('../images/btn-iniciar.png') top left no-repeat;
+  cursor: pointer;
+  /*transition: all .2s ease-in;*/
+}
+  .portada .boton_iniciar:hover {
+    opacity: .8;
+  }
+
+  #btnIniciar1 {
+    left: 957px;
+    top: 317px;
+  }
